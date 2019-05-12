@@ -17,14 +17,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//find the ids of all the buttons relate to the click action
         btnPlay = (Button) findViewById(R.id.btn_Play);
         btnPause = (Button) findViewById(R.id.btn_Pause);
         btnReset = (Button) findViewById(R.id.btn_Reset);
         btnStop = (Button)findViewById(R.id.btn_Stop);
+<<<<<<< HEAD
 
         mediaPlayer = MediaPlayer.create(this, R.raw.color_dusty_yellow);
 
+=======
+//immeadiately create / prepare the media file when the app is launch
+        mediaPlayer = MediaPlayer.create(this, R.raw.verynicetumdo);
+//start the media player from the beginneing
+>>>>>>> 8d93e91c4a896e33aaa76c1b742913b33e673bf9
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -40,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
+//stops the ,usic . and resummes from the last stop
         btnPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -59,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                //resets the song to its origin start position
                 mediaPlayer.reset();
             }
         });
